@@ -1,0 +1,47 @@
+﻿{
+  "products": [
+    {
+      "id": "1",
+      "name": "Pixhawk 2.4.8 Flight Controller",
+      "category": "Flight Controllers",
+      "price": 145.00,
+      "image": "https://images.unsplash.com/photo-1508614589041-895b88991e3e?auto=format&fit=crop&w=600&q=80",
+      "description": "Advanced 32 bit ARM Cortex M4 processor running NuttX RTOS. Integrated autonomous flight stabilization.",
+      "stock": 15,
+      "specs": { "Processor": "32bit STM32F427", "Sensor": "MPU6000", "Protocol": "MAVLink" }
+    },
+    {
+      "id": "2",
+      "name": "NVIDIA Jetson Nano Developer Kit",
+      "category": "Companion Computers",
+      "price": 129.99,
+      "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=600&q=80",
+      "description": "Small, powerful AI computer for autonomous drones and robotics object detection.",
+      "stock": 8,
+      "specs": { "GPU": "128-core Maxwell", "CPU": "Quad-core ARM A57", "Memory": "4GB LPDDR4" }
+    },
+    {
+      "id": "3",
+      "name": "BLHeli_32 45A ESC",
+      "category": "Power & Motor Control",
+      "price": 32.50,
+      "image": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=600&q=80",
+      "description": "High performance 32-bit ESC with telemetry support up to 6S LiPo.",
+      "stock": 30,
+      "specs": { "Current": "45A Continuous", "Input": "3-6S LiPo", "Firmware": "BLHeli_32" }
+    },
+    {
+      "id": "4",
+      "name": "Tattu 5200mAh 4S LiPo Battery",
+      "category": "Batteries",
+      "price": 68.00,
+      "image": "https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?auto=format&fit=crop&w=600&q=80",
+      "description": "High energy density lithium polymer battery engineered for extended multirotor flight time.",
+      "stock": 20,
+      "specs": { "Capacity": "5200mAh", "Voltage": "14.8V (4S)", "Discharge": "25C" }
+    }
+  ],
+  "users": [],
+  "carts": {},
+  "orders": []
+}

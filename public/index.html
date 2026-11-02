@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RC TechMart | Electronics & Robotics Components</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header class="glass">
+        <div class="logo" onclick="location.reload()">⚡ RC<span>TechMart</span></div>
+        <div class="nav-actions">
+            <button class="btn-glass" id="ordersBtn" style="display:none;">My Orders</button>
+            <button class="btn-glass" id="authBtn">Login / Register</button>
+            <button class="btn-amber" onclick="toggleCart()">🛒 Cart (<span id="cartCount">0</span>)</button>
+        </div>
+    </header>
+
+    <div class="main-container">
+        <section class="hero glass">
+            <h1>Advanced <span>RC & Robotics</span> Components</h1>
+            <p>Engineered for high-performance UAVs, autonomous drones, and robotics systems.</p>
+        </section>
+
+        <div class="search-filter">
+            <input type="text" id="searchInput" placeholder="Search components..." oninput="filterProducts()">
+            <select id="categorySelect" onchange="filterProducts()">
+                <option value="">All Categories</option>
+                <option value="Flight Controllers">Flight Controllers</option>
+                <option value="Companion Computers">Companion Computers</option>
+                <option value="Power & Motor Control">Power & Motor Control</option>
+                <option value="Batteries">Batteries</option>
+            </select>
+        </div>
+
+        <div class="products-grid" id="productsGrid"></div>
+    </div>
+
+    <div class="modal" id="productModal">
+        <div class="modal-content glass">
+            <button class="close-btn" onclick="closeProductModal()">&times;</button>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+    <div class="modal" id="authModal">
+        <div class="modal-content glass">
+            <button class="close-btn" onclick="closeAuthModal()">&times;</button>
+            <h2 id="authTitle" style="margin-bottom:1.5rem;">User Login</h2>
+            <div class="form-group" id="nameGroup" style="display:none;">
+                <label>Full Name</label>
+                <input type="text" id="regName" placeholder="Tanvirul Islam">
+            </div>
+            <div class="form-group">
+                <label>Email Address</label>
+                <input type="email" id="authEmail" placeholder="user@example.com">
+            </div>
+            <div class="form-group">
+                <label>Password</label>
+                <input type="password" id="authPassword" placeholder="••••••••">
+            </div>
+            <button class="btn-amber" style="width:100%; padding:0.9rem;" onclick="handleAuth()" id="authSubmitBtn">Login</button>
+            <p style="margin-top:1rem; text-align:center; cursor:pointer;" onclick="toggleAuthMode()">Switch Login / Register</p>
+        </div>
+    </div>
+
+    <div class="cart-drawer" id="cartDrawer">
+        <div style="display:flex; justify-content:space-between; align-items:center;">
+            <h2>Shopping Cart</h2>
+            <button class="close-btn" style="position:static;" onclick="toggleCart()">&times;</button>
+        </div>
+        <div class="cart-items" id="cartItemsList"></div>
+        <div>
+            <div style="display:flex; justify-content:space-between; margin-bottom:1rem; font-weight:700;">
+                <span>Total:</span>
+                <span id="cartTotalPrice" style="color:var(--amber);">.00</span>
+            </div>
+            <button class="btn-amber" style="width:100%; padding:1rem;" onclick="checkout()">Checkout</button>
+        </div>
+    </div>
+
+    <div class="notification" id="notification"></div>
+
+    <script src="/js/api.js"></script>
+    <script src="/js/auth.js"></script>
+    <script src="/js/products.js"></script>
+    <script src="/js/cart.js"></script>
+    <script src="/js/app.js"></script>
+</body>
+</html>
